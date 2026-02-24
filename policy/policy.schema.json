@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExecGuard Policy",
+  "type": "object",
+  "properties": {
+    "allowlist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sha256": {"type": "string", "minLength": 64, "maxLength": 64},
+          "path": {"type": "string"}
+        },
+        "required": ["sha256"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["allowlist"],
+  "additionalProperties": false
+}

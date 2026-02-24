@@ -1,0 +1,5 @@
+config MINI_EXEC_LSM
+    tristate "Mini Exec LSM (stub)"
+    default n
+    help
+      Stub LSM module implementing bprm_check_security and netlink IPC.
